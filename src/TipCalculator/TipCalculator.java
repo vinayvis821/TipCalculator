@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class TipCalculator 
 {
-	public static void main( String [] args )
+	public static double amount( Scanner key )
 	{
-		Scanner key = new Scanner( System.in );
 		System.out.println( "Enter the total cost of your bill including taxes: " );
 		double amount = key.nextDouble();
 		while( amount <= 0 )
@@ -14,6 +13,11 @@ public class TipCalculator
 			System.out.println( "Enter the total cost of your bill including taxes (bill has to be non-zero and positive: " );
 			amount = key.nextDouble();
 		}
+		return amount;
+	}
+	public static double tip( Scanner key, Bill bill )
+	{
+		double amount = bill.getAmount();
 		double tenPercent = amount * .10;
 		double fifteenPercent = amount * .15;
 		double twentyPercent = amount * .20;
@@ -33,10 +37,10 @@ public class TipCalculator
 			percent = key.nextDouble();
 		}
 		double percentAsDec = percent / 100;
-		double percentChosen = amount * percentAsDec;
-		System.out.println( "Your total with a " + percent + "% tip is $" + (amount+percentChosen) + " (" + percent + "% tip = $" + 
-		percentChosen + ")");
-		
+		return percentAsDec;
+	}
+	public static int split( Scanner key )
+	{
 		System.out.println( "How many people are splitting the bill? " );
 		int people = key.nextInt();
 		while( people <= 0 )
@@ -44,10 +48,15 @@ public class TipCalculator
 			System.out.println( "How many people are splitting the bill? (Enter a positive non-zero number)" );
 			people = key.nextInt();
 		}
-		double splitAmount = (amount + percentChosen)/people;
-		if( people == 1 )
-			System.out.println( "You are paying the full amount of $" + (amount+percentChosen) );
-		else
-			System.out.println( people + " people need to each pay $" + splitAmount );
+		return people;
+	}
+	public static void main( String [] args )
+	{
+		Scanner key = new Scanner( System.in );
+		Bill bill = new Bill();
+		bill.setAmount( amount(key) );
+		bill.setTipPercent( tip(key,bill) );
+		bill.setSplits( split(key) );
+		System.out.println( bill );
 	}
 }
