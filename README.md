@@ -14,7 +14,7 @@ Additional functionalities may be coming soon. If you have any ideas, please rea
 Java, and will then move to swift and be finished before the end of 2020.
 
 ## Thank you for reading
-If you like what you see, and would like to track this project's development, please consider hitting the watch button. Updates 
+If you like what you see, and would like to track this project's development, please consider hitting the watch button or give it a star. Updates 
 will be posted regularly.
 
 _-vinayvis821_
