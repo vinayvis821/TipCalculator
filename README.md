@@ -1,6 +1,6 @@
 # Tip-Calculator Project:
 
-**This project is currently in the development stage**
+**This project is currently in the development stage using xCode**
 
 ## About the project
 This project will end up becoming a iOS app using swift. The functionalities of the app are as follows: 
