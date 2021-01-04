@@ -11,7 +11,7 @@ Finally, the app will prompt for how many people are sharing the bill, and then 
 
 ## Some more details
 Additional functionalities may be coming soon. If you have any ideas, please reach out. This app is currently being prototyped in 
-Java, and will then move to swift and be finished before the end of 2020.
+Java, and will then move to swift and be finished before the end of January 2021.
 
 ## Thank you for reading
 If you like what you see, and would like to track this project's development, please consider hitting the watch button or give it a star. Updates 
